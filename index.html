@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" id="myViewport"  content="width=device-width, initial-scale=1.0">
+    <script>
+        if (screen.width < 768) {
+            var mvp = document.getElementById('myViewport');
+            mvp.setAttribute('content','initial-scale=1');
+        }
+    </script>
+
     <title>Lanparty Invite</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
@@ -18,13 +25,57 @@
         <div class="scene" id="scene">
             <div class="cube" id="cube">
                 <div class="cube__face cube__face--front">
-                    <button id="start">Start!</button>
+                    <h2>You are invited!</h2>
+                    <p>On March 20th you are invited to an epic LAN party!</p>
+                    <p>You can now discover what we will do on that epic day...</p>
+                    <div id="discover">
+                        <button id="start">Discover!</button>
+                    </div>
                 </div>
                 <div class="cube__face cube__face--back">back</div>
-                <div class="cube__face cube__face--right">right</div>
-                <div class="cube__face cube__face--left">left</div>
-                <div class="cube__face cube__face--top">top</div>
-                <div class="cube__face cube__face--bottom">bottom</div>
+                <div class="cube__face cube__face--right">
+                    <h2>Board Games</h2>
+                    <p>
+                        MTG <br>
+                        Lord of the Risk <br>
+                        Catan <br>
+                        <br>
+                        Or... <br>
+                        Bring your own game!
+                    </p>
+                </div>
+                <div class="cube__face cube__face--left">
+                    <h2>Video Games</h2>
+                    <p>
+                        Battle for middle earth <br>
+                        COD Warzone <br>
+                        Mario Cart <br>
+                        <br>
+                        Or...
+                        Send your idea via dikke nerds!
+                    </p>
+
+                </div>
+                <div class="cube__face cube__face--top">
+                    <h2>Social rules</h2>
+                    <p>
+                        Don't come if your feeling ill <br>
+                        Don't come if you don't feel comfortable <br>
+                        Try to not french kiss everyone <br>
+                        <br>
+                        Don't feel bad if you don't wanna come!
+                    </p>
+                </div>
+                <div class="cube__face cube__face--bottom">
+                    <h2>Planning</h2>
+                    
+                    <p>
+                        12:00 - Start <br>
+                        17:00 - Dinner <br>
+                        20:30 - The end? <br>
+                        After - Sleepover?<br>
+                    </p>
+                </div>
             </div>
         </div>
 
